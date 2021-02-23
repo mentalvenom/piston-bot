@@ -15,7 +15,7 @@ class PistonBot(AutoShardedBot):
     def __init__(self, *args, **options):
         super().__init__(*args, **options)
         self.session = None
-        with open('../state/config.json') as conffile:
+        with open('/state/config.json') as conffile:
             self.config = json.load(conffile)
         self.last_errors = []
         self.default_activity = Activity(name='emkc.org/run | /run', type=0)
